@@ -29,8 +29,10 @@ def encode_sentence_to_ids(sentence, token_to_id, unk_token='<unk>'):
     # TODO: convert whitespace tokens of `sentence` to ids via `token_to_id`, using `unk_token`'s id for OOV
     return [token_to_id[word] if word in token_to_id.keys() else token_to_id[unk_token] for word in sentence.split()]
 
-# Step 4 - decode_ids_to_tokens (not yet solved)
-# TODO: implement
+# Step 4 - decode_ids_to_tokens
+def decode_ids_to_tokens(ids, id_to_token):
+    # TODO: map each id in ids to its token string via id_to_token and return the list
+    return [id_to_token[id] for id in ids]
 
 # Step 5 - pad_id_sequence (not yet solved)
 # TODO: implement
